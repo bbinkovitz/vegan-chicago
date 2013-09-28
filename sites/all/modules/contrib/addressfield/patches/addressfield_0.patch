@@ -1,0 +1,27 @@
+--- addressfield.module.orig	2011-09-01 21:39:51.000000000 +0200
++++ addressfield.module	2012-05-11 13:25:14.000000000 +0200
+@@ -348,9 +348,23 @@
+  * Implements hook_field_is_empty().
+  */
+ function addressfield_field_is_empty($item, $field) {
++  $defaults = &drupal_static(__FUNCTION__, FALSE);
++  
+   // Every address field must have at least a country value or it is considered
+   // empty, even if it has name information.
+-  return empty($item['country']);
++  if (empty($item['country'])) {
++    return TRUE;
++  }
++  // If the address consists entirely of default values, it is empty.
++  if (!$defaults) {
++    $defaults = addressfield_default_values();
++  }
++  foreach ($defaults as $key => $val) {
++    if (isset($item[$key]) && $val != $item[$key]) {
++      return FALSE;
++    }
++  }
++  return TRUE;
+ }
+ 
+ /**
