@@ -1,4 +1,4 @@
-@media (min-width: 480px) {
+@media (min-width: $second_breakpoint) {
     table {
         font-size: .85em;
     }
@@ -14,7 +14,7 @@
     }
 }
 // Narrow width settings for tables and forms
-@media (max-width: 480px) {
+@media (max-width: $second_breakpoint) {
     .views-field-title {
         @include pushbutton-effect($white, $gray);
         a {
