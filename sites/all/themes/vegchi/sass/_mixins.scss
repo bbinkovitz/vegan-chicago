@@ -35,3 +35,46 @@
     @include element-invisible-off;
   }
 }
+
+@mixin pushbutton-effect($background, $border) {
+    a {
+        &:link,
+        &:visited {
+            background:     $background;
+            border-radius:  $radius;
+            border-right:   1px solid $border;
+            border-bottom:  2px solid $border;
+            border-top:     1px solid lighten($border, 25);
+            border-left:    1px solid lighten($border, 25);
+        }
+        &:active,
+        &:focus,
+        &:hover {
+            background:     $background;
+            border-top:     2px solid lighten($border, 10);
+            border-left:    1px solid lighten($border, 10);
+            border-bottom:  1px solid lighten($border, 25);
+            border-right:   1px solid lighten($border, 25);
+        }
+    }
+}
+
+@mixin text-link($color) {
+        &:link {
+            color: $color;
+            text-decoration: none;
+            border-bottom: 1px dotted $color;
+        }
+        &:visited {
+            color: lighten($color, 10);
+            text-decoration: none;
+            border-bottom: 1px dotted lighten($color, 10);
+        }
+        &:active,
+        &:focus,
+        &:hover {
+            color: darken($color, 10);
+            text-decoration: none;
+            border-bottom: 1px dotted darken($color, 10);
+        }
+}

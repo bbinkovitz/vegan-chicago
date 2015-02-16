@@ -295,16 +295,6 @@ sub {
   bottom: -0.25em;
 }
 
-/**
- * Lists
- */
-dl,
-menu,
-ol,
-ul {
-  /* Address margins set differently in IE 6/7. */
-  margin: rhythm(1) 0;
-}
 ol,
 ul {
   ol,
