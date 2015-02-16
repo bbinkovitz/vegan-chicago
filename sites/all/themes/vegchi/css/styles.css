@@ -1865,8 +1865,28 @@ and open the template in the editor.
   color: #fff;
 }
 
+@media (min-width: 480px) {
+  /* line 2, ../sass/components/_responsive-views.scss */
+  table {
+    font-size: .85em;
+  }
+
+  /* line 5, ../sass/components/_responsive-views.scss */
+  td {
+    padding: .5em 1em;
+  }
+  /* line 7, ../sass/components/_responsive-views.scss */
+  td.views-field-field-location {
+    width: 20%;
+  }
+  /* line 10, ../sass/components/_responsive-views.scss */
+  td.views-field-title {
+    font-size: 1.2em;
+    width: 25%;
+  }
+}
 @media (max-width: 480px) {
-  /* line 3, ../sass/components/_responsive-views.scss */
+  /* line 18, ../sass/components/_responsive-views.scss */
   .views-field-title {
     padding: .25em;
   }
@@ -1887,7 +1907,7 @@ and open the template in the editor.
     border-bottom: 1px solid #eaeaea;
     border-right: 1px solid #eaeaea;
   }
-  /* line 5, ../sass/components/_responsive-views.scss */
+  /* line 20, ../sass/components/_responsive-views.scss */
   .views-field-title a {
     padding: .5em 1em;
     width: 100%;
@@ -1896,27 +1916,27 @@ and open the template in the editor.
   }
 
   /* Force table to not be like tables anymore */
-  /* line 15, ../sass/components/_responsive-views.scss */
+  /* line 30, ../sass/components/_responsive-views.scss */
   table, thead, tbody, th, td, tr {
     display: block;
     margin: .5em 0;
   }
 
   /* Hide table headers (but not display: none;, for accessibility) */
-  /* line 21, ../sass/components/_responsive-views.scss */
+  /* line 36, ../sass/components/_responsive-views.scss */
   thead tr {
     position: absolute;
     top: -9999px;
     left: -9999px;
   }
 
-  /* line 27, ../sass/components/_responsive-views.scss */
+  /* line 42, ../sass/components/_responsive-views.scss */
   tr {
     border: 1px solid #aaa;
     border-radius: 6px;
   }
 
-  /* line 32, ../sass/components/_responsive-views.scss */
+  /* line 47, ../sass/components/_responsive-views.scss */
   td {
     /* Behave  like a "row" */
     border: none;
