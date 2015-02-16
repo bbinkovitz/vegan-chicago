@@ -11,7 +11,7 @@
 ; The name, description and screenshot used for this theme on the Appearance
 ; page at admin/appearance.
 
-screenshot  = vegiconsm.png
+screenshot  = images/logos/vegicon-tiny.svg
 name        = VegChi
 description = Custom theme for Vegan Chicago. Responsive child theme of Zen.
 
