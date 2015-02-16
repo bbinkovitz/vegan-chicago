@@ -6,6 +6,10 @@ html{
     color:  $darkgray;
 }
 
+hr {
+    margin:0;
+}
+
 a {
     @include text-link($blue);
 }

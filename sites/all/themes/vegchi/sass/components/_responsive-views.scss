@@ -1,0 +1,37 @@
+// Narrow width settings for tables and forms
+@media (max-width: 480px) {
+    .views-field-title {
+        @include pushbutton-effect($white, $gray);
+        a {
+            padding: .5em 1em;
+            width: 100%;
+            font-size: 1.2em;
+            color: $darkred;
+        }
+        padding: .25em;
+    }
+
+    /* Force table to not be like tables anymore */
+    table, thead, tbody, th, td, tr {
+        display: block;
+        margin: .5em 0;
+    }
+
+    /* Hide table headers (but not display: none;, for accessibility) */
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tr {
+        border: 1px solid $gray;
+        border-radius: $radius;
+    }
+
+    td {
+        /* Behave  like a "row" */
+        border: none;
+        position: relative;
+    }
+}
