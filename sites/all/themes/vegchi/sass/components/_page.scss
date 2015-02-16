@@ -1,0 +1,26 @@
+/*
+ *
+ */
+
+html{
+    color:  $darkgray;
+}
+
+a {
+    @include text-link($blue);
+}
+
+h1,
+h2 {
+    color: $darkred;
+}
+
+#content {
+    background: $white;
+    border-radius: $radius;
+    border-right: 1px solid $gray;
+    border-bottom: 2px solid $gray;
+    padding: 1em;
+    margin-bottom: 1em;
+}
+

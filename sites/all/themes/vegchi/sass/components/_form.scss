@@ -1,0 +1,51 @@
+@media all and (max-width: $second-breakpoint) {
+    .form-item,
+    .views-exposed-widget,
+    input,
+    select {
+        display: block;
+        width: 100%;
+    }
+}
+
+input,
+select {
+    border-radius: $radius;
+    padding: .25em;
+    border-top:     2px solid lighten($gray, 10);
+    border-left:    1px solid lighten($gray, 10);
+    border-bottom:  1px solid lighten($gray, 25);
+    border-right:   1px solid lighten($gray, 25);
+}
+
+option {
+    padding: .25em;
+    &:checked {
+        border-radius: $radius;
+    }
+}
+
+.views-exposed-widget {
+    margin-bottom: 1em;
+}
+
+input.form-submit {
+    background-color: $white;
+    border-top: none;
+    border-left: none;
+    padding: .5em;
+    border-radius:  $radius;
+    $border:        $gray;
+    border-right:   1px solid $border;
+    border-bottom:  2px solid $border;
+    border-top:     1px solid lighten($border, 25);
+    border-left:    1px solid lighten($border, 25);
+    &:active,
+    &:focus,
+    &:hover {
+        border-top:     2px solid lighten($border, 10);
+        border-left:    1px solid lighten($border, 10);
+        border-bottom:  1px solid lighten($border, 25);
+        border-right:   1px solid lighten($border, 25);
+    }
+}
