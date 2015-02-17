@@ -662,10 +662,10 @@ function vegchi_content_main_listing_views_default_views() {
   );
   $handler->display->display_options['filters']['field_type_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_type_tid']['vocabulary'] = 'type_of_business';
-  $handler->display->display_options['path'] = 'all-things/beauty-and-grooming';
+  $handler->display->display_options['path'] = 'all-things/fashion-clothes';
   $handler->display->display_options['menu']['type'] = 'tab';
   $handler->display->display_options['menu']['title'] = 'Beauty and Grooming';
-  $handler->display->display_options['menu']['description'] = 'Salons, spas, barbers, and vegan personal care';
+  $handler->display->display_options['menu']['description'] = 'Fashion, clothing, accessories, and shoes';
   $handler->display->display_options['menu']['weight'] = '0';
   $handler->display->display_options['menu']['context'] = 0;
   $handler->display->display_options['menu']['context_only_inline'] = 0;
@@ -766,10 +766,10 @@ function vegchi_content_main_listing_views_default_views() {
   );
   $handler->display->display_options['filters']['field_type_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_type_tid']['vocabulary'] = 'type_of_business';
-  $handler->display->display_options['path'] = 'all-things/beauty-and-grooming';
+  $handler->display->display_options['path'] = 'all-things/community';
   $handler->display->display_options['menu']['type'] = 'tab';
-  $handler->display->display_options['menu']['title'] = 'Beauty and Grooming';
-  $handler->display->display_options['menu']['description'] = 'Salons, spas, barbers, and vegan personal care';
+  $handler->display->display_options['menu']['title'] = 'Community';
+  $handler->display->display_options['menu']['description'] = 'Groups and organizations for veganism and animal rights.';
   $handler->display->display_options['menu']['weight'] = '0';
   $handler->display->display_options['menu']['context'] = 0;
   $handler->display->display_options['menu']['context_only_inline'] = 0;
