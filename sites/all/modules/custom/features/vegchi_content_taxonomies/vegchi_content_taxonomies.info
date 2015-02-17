@@ -11,7 +11,6 @@ features[taxonomy][] = localness
 features[taxonomy][] = neigborhood
 features[taxonomy][] = schtick
 features[taxonomy][] = tags
-features[taxonomy][] = type_of_business
 features[taxonomy][] = veganity
 mtime = 1424128447
 project path = sites/all/modules/custom/features
