@@ -21,3 +21,11 @@
     padding: 0px;
     color: $darkred;
 }
+
+@media (min-width: $second_breakpoint) {
+    .block-tagclouds {
+        width: 42%;
+        margin: 1%;
+        display: inline-block;
+    }
+}

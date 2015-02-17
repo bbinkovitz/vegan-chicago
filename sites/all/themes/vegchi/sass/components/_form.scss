@@ -9,13 +9,23 @@
 }
 
 input,
-select {
+select,
+textarea {
     border-radius: $radius;
     padding: .25em;
     border-top:     2px solid lighten($gray, 10);
     border-left:    1px solid lighten($gray, 10);
     border-bottom:  1px solid lighten($gray, 25);
     border-right:   1px solid lighten($gray, 25);
+}
+
+// Turns the comment box thing into one single object.
+textarea {
+    border-radius: $radius $radius 0 0;
+}
+
+#edit-comment-body-und-0-format {
+    border-radius: 0 0 $radius $radius;
 }
 
 option {
@@ -30,6 +40,7 @@ option {
 }
 
 input.form-submit {
+    margin: .5em;
     background-color: $white;
     border-top: none;
     border-left: none;
@@ -48,4 +59,8 @@ input.form-submit {
         border-bottom:  1px solid lighten($border, 25);
         border-right:   1px solid lighten($border, 25);
     }
+}
+
+.views-submit-button{
+    clear: both;
 }
