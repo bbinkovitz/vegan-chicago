@@ -35,5 +35,6 @@ features_exclude[taxonomy][schtick] = schtick
 features_exclude[taxonomy][tags] = tags
 features_exclude[taxonomy][type_of_business] = type_of_business
 features_exclude[taxonomy][veganity] = veganity
+mtime = 1424128363
 no autodetect = 1
 project path = sites/all/modules/custom/features
