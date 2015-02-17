@@ -868,6 +868,38 @@ table {
   color: #d6141c;
 }
 
+@media (min-width: 720px) {
+  /* line 26, ../sass/components/_block.scss */
+  .block-tagclouds {
+    width: 42%;
+    margin: 1%;
+    display: inline-block;
+  }
+}
+/* line 1, ../sass/components/_establishment.scss */
+.field-name-field-veganity,
+.field-name-field-localness,
+.field-name-field-type,
+.field-label-above {
+  display: inline-block;
+  padding: .5em 1em;
+  float: left;
+}
+
+/* line 10, ../sass/components/_establishment.scss */
+.field-name-body {
+  clear: both;
+  padding-top: 1em;
+  border-bottom: 1px solid #aaa;
+}
+
+/* line 16, ../sass/components/_establishment.scss */
+section.comments {
+  clear: both;
+  border-top: 1px solid #aaa;
+  padding-top: .5em;
+}
+
 @media all and (max-width: 720px) {
   /* line 2, ../sass/components/_form.scss */
   .form-item,
@@ -880,7 +912,8 @@ table {
 }
 /* line 11, ../sass/components/_form.scss */
 input,
-select {
+select,
+textarea {
   border-radius: 6px;
   padding: .25em;
   border-top: 2px solid #c3c3c3;
@@ -889,22 +922,33 @@ select {
   border-right: 1px solid #eaeaea;
 }
 
-/* line 21, ../sass/components/_form.scss */
+/* line 23, ../sass/components/_form.scss */
+textarea {
+  border-radius: 6px 6px 0 0;
+}
+
+/* line 27, ../sass/components/_form.scss */
+#edit-comment-body-und-0-format {
+  border-radius: 0 0 6px 6px;
+}
+
+/* line 31, ../sass/components/_form.scss */
 option {
   padding: .25em;
 }
-/* line 23, ../sass/components/_form.scss */
+/* line 33, ../sass/components/_form.scss */
 option:checked {
   border-radius: 6px;
 }
 
-/* line 28, ../sass/components/_form.scss */
+/* line 38, ../sass/components/_form.scss */
 .views-exposed-widget {
   margin-bottom: 1em;
 }
 
-/* line 32, ../sass/components/_form.scss */
+/* line 42, ../sass/components/_form.scss */
 input.form-submit {
+  margin: .5em;
   background-color: #fff;
   border-top: none;
   border-left: none;
@@ -915,12 +959,17 @@ input.form-submit {
   border-top: 1px solid #eaeaea;
   border-left: 1px solid #eaeaea;
 }
-/* line 43, ../sass/components/_form.scss */
+/* line 54, ../sass/components/_form.scss */
 input.form-submit:active, input.form-submit:focus, input.form-submit:hover {
   border-top: 2px solid #c3c3c3;
   border-left: 1px solid #c3c3c3;
   border-bottom: 1px solid #eaeaea;
   border-right: 1px solid #eaeaea;
+}
+
+/* line 64, ../sass/components/_form.scss */
+.views-submit-button {
+  clear: both;
 }
 
 /**
@@ -1865,7 +1914,7 @@ and open the template in the editor.
   color: #fff;
 }
 
-@media (min-width: 480px) {
+@media (min-width: 720px) {
   /* line 2, ../sass/components/_responsive-views.scss */
   table {
     font-size: .85em;
@@ -1885,7 +1934,7 @@ and open the template in the editor.
     width: 25%;
   }
 }
-@media (max-width: 480px) {
+@media (max-width: 720px) {
   /* line 18, ../sass/components/_responsive-views.scss */
   .views-field-title {
     padding: .25em;
