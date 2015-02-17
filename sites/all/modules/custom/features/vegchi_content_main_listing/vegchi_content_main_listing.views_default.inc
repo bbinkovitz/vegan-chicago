@@ -565,6 +565,214 @@ function vegchi_content_main_listing_views_default_views() {
   $handler->display->display_options['tab_options']['description'] = 'A list of all the things.';
   $handler->display->display_options['tab_options']['weight'] = '0';
   $handler->display->display_options['tab_options']['name'] = 'main-menu';
+
+  /* Display: Fashion */
+  $handler = $view->new_display('page', 'Fashion', 'page_3');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Fashion';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'establishment' => 'establishment',
+  );
+  /* Filter criterion: Content: Localness (field_localness) */
+  $handler->display->display_options['filters']['field_localness_tid']['id'] = 'field_localness_tid';
+  $handler->display->display_options['filters']['field_localness_tid']['table'] = 'field_data_field_localness';
+  $handler->display->display_options['filters']['field_localness_tid']['field'] = 'field_localness_tid';
+  $handler->display->display_options['filters']['field_localness_tid']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_localness_tid']['expose']['operator_id'] = 'field_localness_tid_op';
+  $handler->display->display_options['filters']['field_localness_tid']['expose']['label'] = 'Localness';
+  $handler->display->display_options['filters']['field_localness_tid']['expose']['operator'] = 'field_localness_tid_op';
+  $handler->display->display_options['filters']['field_localness_tid']['expose']['identifier'] = 'field_localness_tid';
+  $handler->display->display_options['filters']['field_localness_tid']['expose']['multiple'] = TRUE;
+  $handler->display->display_options['filters']['field_localness_tid']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+  );
+  $handler->display->display_options['filters']['field_localness_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_localness_tid']['vocabulary'] = 'localness';
+  $handler->display->display_options['filters']['field_localness_tid']['hierarchy'] = 1;
+  /* Filter criterion: Content: Neighborhood (field_neighborhood) */
+  $handler->display->display_options['filters']['field_neighborhood_tid']['id'] = 'field_neighborhood_tid';
+  $handler->display->display_options['filters']['field_neighborhood_tid']['table'] = 'field_data_field_neighborhood';
+  $handler->display->display_options['filters']['field_neighborhood_tid']['field'] = 'field_neighborhood_tid';
+  $handler->display->display_options['filters']['field_neighborhood_tid']['value'] = '';
+  $handler->display->display_options['filters']['field_neighborhood_tid']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_neighborhood_tid']['expose']['operator_id'] = 'field_neighborhood_tid_op';
+  $handler->display->display_options['filters']['field_neighborhood_tid']['expose']['label'] = 'Neighborhood';
+  $handler->display->display_options['filters']['field_neighborhood_tid']['expose']['operator'] = 'field_neighborhood_tid_op';
+  $handler->display->display_options['filters']['field_neighborhood_tid']['expose']['identifier'] = 'field_neighborhood_tid';
+  $handler->display->display_options['filters']['field_neighborhood_tid']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+  );
+  $handler->display->display_options['filters']['field_neighborhood_tid']['vocabulary'] = 'neigborhood';
+  /* Filter criterion: Content: Schtick (field_schtick) */
+  $handler->display->display_options['filters']['field_schtick_tid']['id'] = 'field_schtick_tid';
+  $handler->display->display_options['filters']['field_schtick_tid']['table'] = 'field_data_field_schtick';
+  $handler->display->display_options['filters']['field_schtick_tid']['field'] = 'field_schtick_tid';
+  $handler->display->display_options['filters']['field_schtick_tid']['value'] = '';
+  $handler->display->display_options['filters']['field_schtick_tid']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_schtick_tid']['expose']['operator_id'] = 'field_schtick_tid_op';
+  $handler->display->display_options['filters']['field_schtick_tid']['expose']['label'] = 'Schtick';
+  $handler->display->display_options['filters']['field_schtick_tid']['expose']['operator'] = 'field_schtick_tid_op';
+  $handler->display->display_options['filters']['field_schtick_tid']['expose']['identifier'] = 'field_schtick_tid';
+  $handler->display->display_options['filters']['field_schtick_tid']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+  );
+  $handler->display->display_options['filters']['field_schtick_tid']['vocabulary'] = 'schtick';
+  /* Filter criterion: Content: Veganity (field_veganity) */
+  $handler->display->display_options['filters']['field_veganity_tid']['id'] = 'field_veganity_tid';
+  $handler->display->display_options['filters']['field_veganity_tid']['table'] = 'field_data_field_veganity';
+  $handler->display->display_options['filters']['field_veganity_tid']['field'] = 'field_veganity_tid';
+  $handler->display->display_options['filters']['field_veganity_tid']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_veganity_tid']['expose']['operator_id'] = 'field_veganity_tid_op';
+  $handler->display->display_options['filters']['field_veganity_tid']['expose']['label'] = 'Veganity';
+  $handler->display->display_options['filters']['field_veganity_tid']['expose']['operator'] = 'field_veganity_tid_op';
+  $handler->display->display_options['filters']['field_veganity_tid']['expose']['identifier'] = 'field_veganity_tid';
+  $handler->display->display_options['filters']['field_veganity_tid']['expose']['multiple'] = TRUE;
+  $handler->display->display_options['filters']['field_veganity_tid']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+  );
+  $handler->display->display_options['filters']['field_veganity_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_veganity_tid']['vocabulary'] = 'veganity';
+  /* Filter criterion: Content: Type (field_type) */
+  $handler->display->display_options['filters']['field_type_tid']['id'] = 'field_type_tid';
+  $handler->display->display_options['filters']['field_type_tid']['table'] = 'field_data_field_type';
+  $handler->display->display_options['filters']['field_type_tid']['field'] = 'field_type_tid';
+  $handler->display->display_options['filters']['field_type_tid']['value'] = array(
+    148 => '148',
+  );
+  $handler->display->display_options['filters']['field_type_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_type_tid']['vocabulary'] = 'type_of_business';
+  $handler->display->display_options['path'] = 'all-things/beauty-and-grooming';
+  $handler->display->display_options['menu']['type'] = 'tab';
+  $handler->display->display_options['menu']['title'] = 'Beauty and Grooming';
+  $handler->display->display_options['menu']['description'] = 'Salons, spas, barbers, and vegan personal care';
+  $handler->display->display_options['menu']['weight'] = '0';
+  $handler->display->display_options['menu']['context'] = 0;
+  $handler->display->display_options['menu']['context_only_inline'] = 0;
+
+  /* Display: Community */
+  $handler = $view->new_display('page', 'Community', 'page_4');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Community';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'establishment' => 'establishment',
+  );
+  /* Filter criterion: Content: Localness (field_localness) */
+  $handler->display->display_options['filters']['field_localness_tid']['id'] = 'field_localness_tid';
+  $handler->display->display_options['filters']['field_localness_tid']['table'] = 'field_data_field_localness';
+  $handler->display->display_options['filters']['field_localness_tid']['field'] = 'field_localness_tid';
+  $handler->display->display_options['filters']['field_localness_tid']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_localness_tid']['expose']['operator_id'] = 'field_localness_tid_op';
+  $handler->display->display_options['filters']['field_localness_tid']['expose']['label'] = 'Localness';
+  $handler->display->display_options['filters']['field_localness_tid']['expose']['operator'] = 'field_localness_tid_op';
+  $handler->display->display_options['filters']['field_localness_tid']['expose']['identifier'] = 'field_localness_tid';
+  $handler->display->display_options['filters']['field_localness_tid']['expose']['multiple'] = TRUE;
+  $handler->display->display_options['filters']['field_localness_tid']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+  );
+  $handler->display->display_options['filters']['field_localness_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_localness_tid']['vocabulary'] = 'localness';
+  $handler->display->display_options['filters']['field_localness_tid']['hierarchy'] = 1;
+  /* Filter criterion: Content: Neighborhood (field_neighborhood) */
+  $handler->display->display_options['filters']['field_neighborhood_tid']['id'] = 'field_neighborhood_tid';
+  $handler->display->display_options['filters']['field_neighborhood_tid']['table'] = 'field_data_field_neighborhood';
+  $handler->display->display_options['filters']['field_neighborhood_tid']['field'] = 'field_neighborhood_tid';
+  $handler->display->display_options['filters']['field_neighborhood_tid']['value'] = '';
+  $handler->display->display_options['filters']['field_neighborhood_tid']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_neighborhood_tid']['expose']['operator_id'] = 'field_neighborhood_tid_op';
+  $handler->display->display_options['filters']['field_neighborhood_tid']['expose']['label'] = 'Neighborhood';
+  $handler->display->display_options['filters']['field_neighborhood_tid']['expose']['operator'] = 'field_neighborhood_tid_op';
+  $handler->display->display_options['filters']['field_neighborhood_tid']['expose']['identifier'] = 'field_neighborhood_tid';
+  $handler->display->display_options['filters']['field_neighborhood_tid']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+  );
+  $handler->display->display_options['filters']['field_neighborhood_tid']['vocabulary'] = 'neigborhood';
+  /* Filter criterion: Content: Schtick (field_schtick) */
+  $handler->display->display_options['filters']['field_schtick_tid']['id'] = 'field_schtick_tid';
+  $handler->display->display_options['filters']['field_schtick_tid']['table'] = 'field_data_field_schtick';
+  $handler->display->display_options['filters']['field_schtick_tid']['field'] = 'field_schtick_tid';
+  $handler->display->display_options['filters']['field_schtick_tid']['value'] = '';
+  $handler->display->display_options['filters']['field_schtick_tid']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_schtick_tid']['expose']['operator_id'] = 'field_schtick_tid_op';
+  $handler->display->display_options['filters']['field_schtick_tid']['expose']['label'] = 'Schtick';
+  $handler->display->display_options['filters']['field_schtick_tid']['expose']['operator'] = 'field_schtick_tid_op';
+  $handler->display->display_options['filters']['field_schtick_tid']['expose']['identifier'] = 'field_schtick_tid';
+  $handler->display->display_options['filters']['field_schtick_tid']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+  );
+  $handler->display->display_options['filters']['field_schtick_tid']['vocabulary'] = 'schtick';
+  /* Filter criterion: Content: Veganity (field_veganity) */
+  $handler->display->display_options['filters']['field_veganity_tid']['id'] = 'field_veganity_tid';
+  $handler->display->display_options['filters']['field_veganity_tid']['table'] = 'field_data_field_veganity';
+  $handler->display->display_options['filters']['field_veganity_tid']['field'] = 'field_veganity_tid';
+  $handler->display->display_options['filters']['field_veganity_tid']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_veganity_tid']['expose']['operator_id'] = 'field_veganity_tid_op';
+  $handler->display->display_options['filters']['field_veganity_tid']['expose']['label'] = 'Veganity';
+  $handler->display->display_options['filters']['field_veganity_tid']['expose']['operator'] = 'field_veganity_tid_op';
+  $handler->display->display_options['filters']['field_veganity_tid']['expose']['identifier'] = 'field_veganity_tid';
+  $handler->display->display_options['filters']['field_veganity_tid']['expose']['multiple'] = TRUE;
+  $handler->display->display_options['filters']['field_veganity_tid']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+  );
+  $handler->display->display_options['filters']['field_veganity_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_veganity_tid']['vocabulary'] = 'veganity';
+  /* Filter criterion: Content: Type (field_type) */
+  $handler->display->display_options['filters']['field_type_tid']['id'] = 'field_type_tid';
+  $handler->display->display_options['filters']['field_type_tid']['table'] = 'field_data_field_type';
+  $handler->display->display_options['filters']['field_type_tid']['field'] = 'field_type_tid';
+  $handler->display->display_options['filters']['field_type_tid']['value'] = array(
+    10 => '10',
+  );
+  $handler->display->display_options['filters']['field_type_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_type_tid']['vocabulary'] = 'type_of_business';
+  $handler->display->display_options['path'] = 'all-things/beauty-and-grooming';
+  $handler->display->display_options['menu']['type'] = 'tab';
+  $handler->display->display_options['menu']['title'] = 'Beauty and Grooming';
+  $handler->display->display_options['menu']['description'] = 'Salons, spas, barbers, and vegan personal care';
+  $handler->display->display_options['menu']['weight'] = '0';
+  $handler->display->display_options['menu']['context'] = 0;
+  $handler->display->display_options['menu']['context_only_inline'] = 0;
   $export['beauty_and_grooming'] = $view;
 
   return $export;
