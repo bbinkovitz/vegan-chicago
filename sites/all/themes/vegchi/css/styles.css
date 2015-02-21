@@ -879,21 +879,36 @@ table {
 /* line 1, ../sass/components/_establishment.scss */
 .field-name-field-veganity,
 .field-name-field-localness,
-.field-name-field-type,
-.field-label-above {
+.field-name-field-type {
   display: inline-block;
   padding: .5em 1em;
   float: left;
 }
 
-/* line 10, ../sass/components/_establishment.scss */
+@media (max-width: 480px) {
+  /* line 10, ../sass/components/_establishment.scss */
+  .field-label-above {
+    width: 40%;
+    float: left;
+    padding: .5em;
+  }
+}
+@media (min-width: 480px) {
+  /* line 18, ../sass/components/_establishment.scss */
+  .field-label-above {
+    width: 30%;
+    float: left;
+    padding: .5em 1em;
+  }
+}
+/* line 26, ../sass/components/_establishment.scss */
 .field-name-body {
   clear: both;
   padding-top: 1em;
   border-bottom: 1px solid #aaa;
 }
 
-/* line 16, ../sass/components/_establishment.scss */
+/* line 32, ../sass/components/_establishment.scss */
 section.comments {
   clear: both;
   border-top: 1px solid #aaa;
@@ -1775,8 +1790,10 @@ tr.selected td {
   border-bottom: 2px solid #aaa;
   border-top: 1px solid #eaeaea;
   border-left: 1px solid #eaeaea;
+  display: inline-block;
+  margin: .25em 0;
 }
-/* line 50, ../sass/_mixins.scss */
+/* line 52, ../sass/_mixins.scss */
 #main-menu a:active, #main-menu a:focus, #main-menu a:hover {
   background: #fff;
   border-top: 2px solid #c3c3c3;
@@ -1800,8 +1817,10 @@ tr.selected td {
   border-bottom: 2px solid #aaa;
   border-top: 1px solid #eaeaea;
   border-left: 1px solid #eaeaea;
+  display: inline-block;
+  margin: .25em 0;
 }
-/* line 50, ../sass/_mixins.scss */
+/* line 52, ../sass/_mixins.scss */
 .tabs-primary a:active, .tabs-primary a:focus, .tabs-primary a:hover {
   background: #fff;
   border-top: 2px solid #c3c3c3;
@@ -1823,19 +1842,19 @@ hr {
   margin: 0;
 }
 
-/* line 63, ../sass/_mixins.scss */
+/* line 65, ../sass/_mixins.scss */
 a:link {
   color: #2e83b3;
   text-decoration: none;
   border-bottom: 1px dotted #2e83b3;
 }
-/* line 68, ../sass/_mixins.scss */
+/* line 70, ../sass/_mixins.scss */
 a:visited {
   color: #459dcf;
   text-decoration: none;
   border-bottom: 1px dotted #459dcf;
 }
-/* line 73, ../sass/_mixins.scss */
+/* line 75, ../sass/_mixins.scss */
 a:active, a:focus, a:hover {
   color: #24658a;
   text-decoration: none;
@@ -1947,8 +1966,10 @@ and open the template in the editor.
     border-bottom: 2px solid #aaa;
     border-top: 1px solid #eaeaea;
     border-left: 1px solid #eaeaea;
+    display: inline-block;
+    margin: .25em 0;
   }
-  /* line 50, ../sass/_mixins.scss */
+  /* line 52, ../sass/_mixins.scss */
   .views-field-title a:active, .views-field-title a:focus, .views-field-title a:hover {
     background: #fff;
     border-top: 2px solid #c3c3c3;
@@ -1958,8 +1979,8 @@ and open the template in the editor.
   }
   /* line 20, ../sass/components/_responsive-views.scss */
   .views-field-title a {
-    padding: .5em 1em;
-    width: 100%;
+    padding: .5em 2%;
+    width: 96%;
     font-size: 1.2em;
     color: #d6141c;
   }
