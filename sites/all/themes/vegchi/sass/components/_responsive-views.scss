@@ -18,8 +18,8 @@
     .views-field-title {
         @include pushbutton-effect($white, $gray);
         a {
-            padding: .5em 1em;
-            width: 100%;
+            padding: .5em 2%;
+            width: 96%;
             font-size: 1.2em;
             color: $darkred;
         }
