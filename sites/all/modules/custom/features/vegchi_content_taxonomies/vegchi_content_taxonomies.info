@@ -1,0 +1,16 @@
+name = VegChi Content: Taxonomies
+description = All the vocabularies for vegan chicago.
+core = 7.x
+package = VegChi Content
+version = 7.x-1.0
+project = vegchi_content_taxonomies
+dependencies[] = features
+dependencies[] = taxonomy
+features[features_api][] = api:2
+features[taxonomy][] = localness
+features[taxonomy][] = neigborhood
+features[taxonomy][] = schtick
+features[taxonomy][] = tags
+features[taxonomy][] = veganity
+mtime = 1424128447
+project path = sites/all/modules/custom/features

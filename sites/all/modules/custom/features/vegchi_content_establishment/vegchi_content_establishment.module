@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the VegChi Content: Establishment feature.
+ */
+
+include_once 'vegchi_content_establishment.features.inc';

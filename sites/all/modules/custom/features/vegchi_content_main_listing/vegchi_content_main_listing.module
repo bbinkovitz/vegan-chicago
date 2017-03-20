@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the VegChi Content: Main Listing feature.
+ */
+
+include_once 'vegchi_content_main_listing.features.inc';
