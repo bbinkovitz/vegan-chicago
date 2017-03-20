@@ -1,0 +1,82 @@
+// @file
+// Custom sass mixins
+//
+// Define the custom mixins for your project here.
+// http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#defining_a_mixin
+
+// Makes an element visually hidden, but accessible.
+// @see http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+@mixin element-invisible {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+    clip: rect(1px 1px 1px 1px); // IE6 and IE7 use the wrong syntax.
+  }
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+// Turns off the element-invisible effect.
+@mixin element-invisible-off {
+  position: static !important;
+  clip: auto;
+  height: auto;
+  width: auto;
+  overflow: auto;
+}
+
+// Makes an element visually hidden by default, but visible when focused.
+@mixin element-focusable {
+  @include element-invisible;
+
+  &:active,
+  &:focus {
+    @include element-invisible-off;
+  }
+}
+
+@mixin pushbutton-effect($background, $border) {
+    a {
+        &:link,
+        &:visited {
+            background:     $background;
+            border-radius:  $radius;
+            border-right:   1px solid $border;
+            border-bottom:  2px solid $border;
+            border-top:     1px solid lighten($border, 25);
+            border-left:    1px solid lighten($border, 25);
+            display: inline-block;
+            margin:.25em 0;
+        }
+        &:active,
+        &:focus,
+        &:hover {
+            background:     $background;
+            border-top:     2px solid lighten($border, 10);
+            border-left:    1px solid lighten($border, 10);
+            border-bottom:  1px solid lighten($border, 25);
+            border-right:   1px solid lighten($border, 25);
+        }
+    }
+}
+
+@mixin text-link($color) {
+        &:link {
+            color: $color;
+            text-decoration: none;
+            border-bottom: 1px dotted $color;
+        }
+        &:visited {
+            color: lighten($color, 10);
+            text-decoration: none;
+            border-bottom: 1px dotted lighten($color, 10);
+        }
+        &:active,
+        &:focus,
+        &:hover {
+            color: darken($color, 10);
+            text-decoration: none;
+            border-bottom: 1px dotted darken($color, 10);
+        }
+}

@@ -1,0 +1,31 @@
+/*
+ *
+ */
+
+#page {
+    background-color: $lightgray;
+    padding: 1em;
+}
+
+.block {
+    background-color:   $white;
+    border-radius:      $radius;
+    border-right: 1px solid $gray;
+    border-bottom: 2px solid $gray;
+    padding: 1em;
+}
+
+.block__title {
+    border-bottom: 1px solid $lightgray;
+    margin-bottom: 1em;
+    padding: 0px;
+    color: $darkred;
+}
+
+@media (min-width: $second_breakpoint) {
+    .block-tagclouds {
+        width: 42%;
+        margin: 1%;
+        display: inline-block;
+    }
+}

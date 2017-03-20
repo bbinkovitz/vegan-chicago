@@ -1,0 +1,49 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Feb 15, 2015, 5:32:50 PM
+    Author     : bbinkovitz
+*/
+
+.styleguide-colors__title {
+    color: $darkblue;
+    border-bottom: 1px solid $lightgray;
+    text-indent: 1em;
+}
+
+.styleguide-colors__list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-indent: 2em;
+}
+
+.styleguide-colors__color {
+    list-style-type: none;
+    line-height: 2em;
+    margin: 0;
+    padding: 1em;
+}
+
+.styleguide-colors__main {
+    background: $darkblue;
+    color: $white;
+}
+
+.styleguide-colors__accent_one {
+    background: $lightblue;
+    color: $white;
+}
+
+.styleguide-colors__accent_two {
+    background: $lightgray;
+    color: $darkblue;
+}
+
+.styleguide-colors__accent_three {
+    background: $red;
+    color: $white;
+}
