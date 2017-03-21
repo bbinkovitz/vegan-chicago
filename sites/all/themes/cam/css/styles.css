@@ -882,10 +882,23 @@ table {
   input,
   select {
     display: block;
-    width: 100%;
+    width: auto;
+  }
+
+  /* line 9, ../sass/components/_form.scss */
+  .form-checkbox,
+  .form-radio {
+    float: left;
+    margin-right: 0.75em;
+    margin-top: 2px;
+  }
+
+  /* line 15, ../sass/components/_form.scss */
+  .webform-container-inline div, .webform-container-inline div.form-item {
+    display: block;
   }
 }
-/* line 11, ../sass/components/_form.scss */
+/* line 21, ../sass/components/_form.scss */
 input,
 select,
 textarea {
@@ -897,31 +910,31 @@ textarea {
   border-right: 1px solid #eaeaea;
 }
 
-/* line 23, ../sass/components/_form.scss */
+/* line 33, ../sass/components/_form.scss */
 textarea {
   border-radius: 6px 6px 0 0;
 }
 
-/* line 27, ../sass/components/_form.scss */
+/* line 37, ../sass/components/_form.scss */
 #edit-comment-body-und-0-format {
   border-radius: 0 0 6px 6px;
 }
 
-/* line 31, ../sass/components/_form.scss */
+/* line 41, ../sass/components/_form.scss */
 option {
   padding: .25em;
 }
-/* line 33, ../sass/components/_form.scss */
+/* line 43, ../sass/components/_form.scss */
 option:checked {
   border-radius: 6px;
 }
 
-/* line 38, ../sass/components/_form.scss */
+/* line 48, ../sass/components/_form.scss */
 .views-exposed-widget {
   margin-bottom: 1em;
 }
 
-/* line 42, ../sass/components/_form.scss */
+/* line 52, ../sass/components/_form.scss */
 input.form-submit {
   margin: .5em;
   background-color: #fff;
@@ -934,7 +947,7 @@ input.form-submit {
   border-top: 1px solid #eaeaea;
   border-left: 1px solid #eaeaea;
 }
-/* line 54, ../sass/components/_form.scss */
+/* line 64, ../sass/components/_form.scss */
 input.form-submit:active, input.form-submit:focus, input.form-submit:hover {
   border-top: 2px solid #c4c4c4;
   border-left: 1px solid #c4c4c4;
@@ -942,7 +955,7 @@ input.form-submit:active, input.form-submit:focus, input.form-submit:hover {
   border-right: 1px solid #eaeaea;
 }
 
-/* line 64, ../sass/components/_form.scss */
+/* line 74, ../sass/components/_form.scss */
 .views-submit-button {
   clear: both;
 }
@@ -1915,6 +1928,16 @@ and open the template in the editor.
 }
 @media (max-width: 720px) {
   /* line 18, ../sass/components/_responsive-views.scss */
+  caption {
+    display: block;
+  }
+
+  /* line 21, ../sass/components/_responsive-views.scss */
+  th {
+    display: none;
+  }
+
+  /* line 24, ../sass/components/_responsive-views.scss */
   .views-field-title {
     padding: .25em;
   }
@@ -1937,7 +1960,7 @@ and open the template in the editor.
     border-bottom: 1px solid #eaeaea;
     border-right: 1px solid #eaeaea;
   }
-  /* line 20, ../sass/components/_responsive-views.scss */
+  /* line 26, ../sass/components/_responsive-views.scss */
   .views-field-title a {
     padding: .5em 2%;
     width: 96%;
@@ -1946,27 +1969,32 @@ and open the template in the editor.
   }
 
   /* Force table to not be like tables anymore */
-  /* line 30, ../sass/components/_responsive-views.scss */
-  table, thead, tbody, th, td, tr {
-    display: block;
+  /* line 36, ../sass/components/_responsive-views.scss */
+  table, thead, tbody, td, tr {
+    display: inline-table;
     margin: .5em 0;
   }
 
+  /* line 40, ../sass/components/_responsive-views.scss */
+  td {
+    margin: .5em;
+  }
+
   /* Hide table headers (but not display: none;, for accessibility) */
-  /* line 36, ../sass/components/_responsive-views.scss */
+  /* line 45, ../sass/components/_responsive-views.scss */
   thead tr {
     position: absolute;
     top: -9999px;
     left: -9999px;
   }
 
-  /* line 42, ../sass/components/_responsive-views.scss */
+  /* line 51, ../sass/components/_responsive-views.scss */
   tr {
     border: 1px solid #aaa;
     border-radius: 6px;
   }
 
-  /* line 47, ../sass/components/_responsive-views.scss */
+  /* line 56, ../sass/components/_responsive-views.scss */
   td {
     /* Behave  like a "row" */
     border: none;
