@@ -15,6 +15,12 @@
 }
 // Narrow width settings for tables and forms
 @media (max-width: $second_breakpoint) {
+    caption {
+        display: block;
+    }
+    th {
+        display: none;
+    }
     .views-field-title {
         @include pushbutton-effect($white, $gray);
         a {
@@ -27,9 +33,12 @@
     }
 
     /* Force table to not be like tables anymore */
-    table, thead, tbody, th, td, tr {
-        display: block;
+    table, thead, tbody, td, tr {
+        display: inline-table;
         margin: .5em 0;
+    }
+    td {
+        margin: .5em;
     }
 
     /* Hide table headers (but not display: none;, for accessibility) */

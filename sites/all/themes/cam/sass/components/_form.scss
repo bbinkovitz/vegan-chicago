@@ -4,8 +4,18 @@
     input,
     select {
         display: block;
-        width: 100%;
+        width: auto;
     }
+    .form-checkbox,
+    .form-radio {
+        float: left;
+        margin-right: rhythm(.5);
+        margin-top: 2px;
+    }
+    .webform-container-inline div, .webform-container-inline div.form-item {
+        display: block;
+    }
+
 }
 
 input,
