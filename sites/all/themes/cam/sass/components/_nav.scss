@@ -1,0 +1,23 @@
+#header {
+    a {
+        border: 0px;
+    }    
+}
+
+.header__logo-image {
+    width: 100px;
+    height: auto;
+}
+
+#main-menu{
+    @include pushbutton-effect($white, $gray);
+    a {
+        color: $darkblue;
+        text-decoration: none;
+        padding: .5em;
+        margin: 1em;
+    }
+}
+.tabs-primary {
+    @include pushbutton-effect($white, $gray);
+}

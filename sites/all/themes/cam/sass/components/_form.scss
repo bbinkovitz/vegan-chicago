@@ -1,0 +1,76 @@
+@media all and (max-width: $second-breakpoint) {
+    .form-item,
+    .views-exposed-widget,
+    input,
+    select {
+        display: block;
+        width: auto;
+    }
+    .form-checkbox,
+    .form-radio {
+        float: left;
+        margin-right: rhythm(.5);
+        margin-top: 2px;
+    }
+    .webform-container-inline div, .webform-container-inline div.form-item {
+        display: block;
+    }
+
+}
+
+input,
+select,
+textarea {
+    border-radius: $radius;
+    padding: .25em;
+    border-top:     2px solid lighten($gray, 10);
+    border-left:    1px solid lighten($gray, 10);
+    border-bottom:  1px solid lighten($gray, 25);
+    border-right:   1px solid lighten($gray, 25);
+}
+
+// Turns the comment box thing into one single object.
+textarea {
+    border-radius: $radius $radius 0 0;
+}
+
+#edit-comment-body-und-0-format {
+    border-radius: 0 0 $radius $radius;
+}
+
+option {
+    padding: .25em;
+    &:checked {
+        border-radius: $radius;
+    }
+}
+
+.views-exposed-widget {
+    margin-bottom: 1em;
+}
+
+input.form-submit {
+    margin: .5em;
+    background-color: $white;
+    border-top: none;
+    border-left: none;
+    padding: .5em;
+    border-radius:  $radius;
+    $border:        $gray;
+    border-right:   1px solid $border;
+    border-bottom:  2px solid $border;
+    border-top:     1px solid lighten($border, 25);
+    border-left:    1px solid lighten($border, 25);
+    &:active,
+    &:focus,
+    &:hover {
+        border-top:     2px solid lighten($border, 10);
+        border-left:    1px solid lighten($border, 10);
+        border-bottom:  1px solid lighten($border, 25);
+        border-right:   1px solid lighten($border, 25);
+    }
+}
+
+.views-submit-button{
+    clear: both;
+}
